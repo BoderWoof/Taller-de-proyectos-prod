@@ -29,14 +29,14 @@ phases:
 
       - sam package template.yaml --output-template-file packaged.yaml --s3-bucket s3-ipa-compilado
       - aws cloudformation deploy --template-file packaged.yaml --stack-name stack-prueba --capabilities CAPABILITY_NAMED_IAM --region us-east-1
-      - aws s3 sync ./frontend/mfe-contenedor/dist s3://s3-mf-contenedor --delete
-      - aws s3 sync ./frontend/mf-header/dist s3://s3-mf-header --delete
-      - aws s3 sync ./frontend/mfe-prueba/dist s3://s3-mf-prueba --delete
-      - aws s3 sync ./frontend/mfe-registro-logueo-comprador/dist s3://s3-mf-registro-logueo-comprador --delete
-      - aws s3 sync ./frontend/mfe-administrador-gestion/dist s3://s3-mf-administrador-gestion --delete
-      - aws s3 sync ./frontend/mfe-registrar-contribuidor/dist s3://s3-mf-registrar-contribuidor --delete
-      - aws s3 sync ./frontend/mfe-hu2-003-verificar-estado-de-subida-del-arte/dist s3://s3-mf-verificar-estado-de-subida-de-arte --delete
-      - aws s3 sync ./frontend/mfe-explorar-blog/dist s3://s3-mf-explorar-blog --delete
+      - aws s3 sync ./frontend/mfe-contenedor/dist s3://s3-mf-contenedor-prod --delete
+      - aws s3 sync ./frontend/mf-header/dist s3://s3-mf-header-prod --delete
+      - aws s3 sync ./frontend/mfe-prueba/dist s3://s3-mf-prueba-prod --delete
+      - aws s3 sync ./frontend/mfe-registro-logueo-comprador/dist s3://s3-mf-registro-logueo-comprador-prod --delete
+      - aws s3 sync ./frontend/mfe-administrador-gestion/dist s3://s3-mf-administrador-gestion-prod --delete
+      - aws s3 sync ./frontend/mfe-registrar-contribuidor/dist s3://s3-mf-registrar-contribuidor-prod --delete
+      - aws s3 sync ./frontend/mfe-hu2-003-verificar-estado-de-subida-del-arte/dist s3://s3-mf-verificar-estado-de-subida-de-arte-prod --delete
+      - aws s3 sync ./frontend/mfe-explorar-blog/dist s3://s3-mf-explorar-blog-prod --delete
 
 artifacts:
   files:

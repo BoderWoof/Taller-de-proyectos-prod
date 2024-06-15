@@ -896,7 +896,7 @@ Resources:
             Path: /Contribuidor/ObtenerEstilos
             Method: get
   
-  LambdaVerReporteMensualesEnBaseAAño:
+  LambdaVerReporteMensualesEnBaseAAno:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: backend/lambda-ver-reporte-en-base-a-ano-contribuidor/

@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 
-// Configuración de la conexión a la base de datos MySQL
+// Configuración de la conexión a la base de datos MySQL..
 const connection = await mysql.createConnection({
     host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
     user: 'admincloud',

@@ -21,10 +21,10 @@ const handler = async (event) => {
     }
 
     const connection = await mysql.createConnection({
-        host: 'rds-development-db.chu4imeus62g.us-east-1.rds.amazonaws.com',
-        user: 'admindev',
-        password: 'passworddev',
-        database: 'db_cloud'
+        host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+        user: 'admincloud',
+        password: 'AdminNube13',
+        database: 'production_cloud'
     });
 
     const legalNameArray = legalName.split(' ');
@@ -131,10 +131,10 @@ const handler = async (event) => {
     }
 
     const cognito = new AWS.CognitoIdentityServiceProvider();
-    const userPoolId = 'us-east-1_MCOvPBJxj';
+    const userPoolId = 'us-east-1_vjhEtS6iz';
     const groupName = 'Contribuidores';
-    const clientId = '3qeneeb39gfcaq8ci2jvhq1koj';
-    const clientSecret = '101tvrap5lq33oca6lfmvjkmitqhpkk6bjp7arm7bpjq211kuo1g';
+    const clientId = '4hlmjlikdfakvj1sansuitdsia';
+    const clientSecret = 'e61gmm1mr5303q0h5pnm2vkbvtjr39cng0d08l4ki9c6b5ntad5';
 
     const message = email + clientId;
     const hmac = crypto.createHmac('sha256', clientSecret);

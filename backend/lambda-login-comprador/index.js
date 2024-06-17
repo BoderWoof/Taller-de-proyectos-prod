@@ -5,9 +5,10 @@ const cognitoIdentityServiceProvider = new AWS.CognitoIdentityServiceProvider();
 exports.handler = async (event) => {
     const { username, password } = JSON.parse(event.body);
 
+
     // Configuración de Cognito
-    const clientId = '36d4j58hqarae04v8408v4phk';
-    const clientSecret = '1kscic77oe9j79jlbqbsuucav0b4aqsphu137ho2pimpsm8bflrp';
+    const clientId = '5dk7dini4mq7lv66ftieijacf5';
+    const clientSecret = 'hc4v7isdksa0nmg3o7rqe6ms8c8dkspdbhllftfrbgkphf0p9i';
 
     // Calcula el hash secreto
     const message = username + clientId;

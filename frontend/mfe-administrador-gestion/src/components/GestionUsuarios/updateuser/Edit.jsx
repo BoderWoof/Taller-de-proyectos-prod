@@ -25,7 +25,7 @@ const Edit = () =>{
     }
 
     useEffect(()=>{
-        axios.get(`https://b8tz3ijhgg.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/EditarUsuarios?${idUsuario}`)
+        axios.get(`https://7af178ezd3.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/EditarUsuarios?${idUsuario}`)
         .then((response)=>{
             setUser(response.data)
         })

@@ -11,7 +11,7 @@ const User = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("https://b8tz3ijhgg.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/Compradores");
+            const response = await axios.get("https://7af178ezd3.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/Compradores");
             console.log(response.data);
             setUsers(response.data);
             setFilteredUsers(response.data); // Inicialmente mostramos todos los usuarios
@@ -29,7 +29,7 @@ const User = () => {
     }, [filterRole, users]);
 
     const deleteUser = async (userId) => {
-        await axios.delete(`https://b8tz3ijhgg.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/EliminarUsuario?${userId}`)
+        await axios.delete(`https://7af178ezd3.execute-api.us-east-1.amazonaws.com/Prod/Usuarios/EliminarUsuario?${userId}`)
             .then((response) => {
                 setUsers((prevUsers) => prevUsers.filter((user) => user.idUsuaruio !== userId));
                 toast.success("Usuario Eliminado", { position: 'top-right' });

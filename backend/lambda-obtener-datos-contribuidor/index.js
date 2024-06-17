@@ -3,10 +3,10 @@ const util = require('util'); // Importa el módulo util para usar promisify y c
 
 // Crea un pool de conexiones a la base de datos con las credenciales y parámetros especificados.
 const pool = mysql.createPool({
-    host: 'rds-development-db.chu4imeus62g.us-east-1.rds.amazonaws.com',
-    user: 'admindev',
-    password: 'passworddev',
-    database: 'db_cloud'
+  host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+  user: 'admincloud',
+  password: 'AdminNube13',
+  database: 'production_cloud'
 });
 
 // Convierte pool.query a una función basada en promesas para usar async/await.

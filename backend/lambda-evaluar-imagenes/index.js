@@ -8,11 +8,11 @@ const config = {
     dbName: 'primera'*/
 };
 
-const connection = mysql.createConnection({
-    host: process.env.host,
-    user: process.env.user,
-    password: process.env.password,
-    database: process.env.database
+const connection = await mysql.createConnection({
+    host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+    user: 'admincloud',
+    password: 'AdminNube13',
+    database: 'production_cloud'
 });
 
 exports.handler = async (event) => {

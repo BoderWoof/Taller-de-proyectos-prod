@@ -4,10 +4,10 @@ const handler = async (event) =>  {
     try {
         // Crear una conexión a la base de datos
         const connection = await mysql.createConnection({
-            host: 'rds-development-db.chu4imeus62g.us-east-1.rds.amazonaws.com',
-            user: 'admindev',
-            password: 'passworddev',
-            database: 'db_cloud'
+            host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+            user: 'admincloud',
+            password: 'AdminNube13',
+            database: 'production_cloud'
         });
 
         // Consulta SQL para seleccionar usuarios con el tipo 'Cliente'

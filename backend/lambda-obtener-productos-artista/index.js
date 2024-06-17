@@ -2,11 +2,11 @@ const mysql = require('mysql2/promise');
 exports.handler = async (event, context) => {
   // Establecemos la conexión con la base de datos MySQL usando las credenciales proporcionadas.
   const connection = await mysql.createConnection({
-    host: 'rds-development-db.chu4imeus62g.us-east-1.rds.amazonaws.com',
-    user: 'admindev',
-    password: 'passworddev',
-    database: 'db_cloud'
-  });
+    host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+    user: 'admincloud',
+    password: 'AdminNube13',
+    database: 'production_cloud'
+});
 
   try {
     // Extraemos los parámetros de la consulta.

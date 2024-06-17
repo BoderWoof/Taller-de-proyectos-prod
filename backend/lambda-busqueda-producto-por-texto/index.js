@@ -8,11 +8,11 @@ const handler = async (event) => {
 
   try {
     const connection = await mysql.createConnection({
-      host: 'rds-development-db.chu4imeus62g.us-east-1.rds.amazonaws.com',
-      user: 'admindev',
-      password: 'passworddev',
-      database: 'db_cloud'
-    });
+      host: 'rds-production.cfqss0488m50.us-east-1.rds.amazonaws.com',
+      user: 'admincloud',
+      password: 'AdminNube13',
+      database: 'production_cloud'
+  });
 
     const consulta = `SELECT P.pro_int_id_producto AS idProducto, 
                              P.pro_txt_nombre_producto AS nombre_producto, 

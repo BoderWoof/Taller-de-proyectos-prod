@@ -30,7 +30,7 @@ phases:
       - sam package template.yaml --output-template-file packaged.yaml --s3-bucket s3-ipa-compilado-prod --region us-east-1
       - aws cloudformation deploy --template-file packaged.yaml --stack-name stack-prueba --capabilities CAPABILITY_NAMED_IAM --region us-east-1
       - aws s3 sync ./frontend/mfe-contenedor/dist s3://s3-mf-contenedor-prod --delete
-      - aws s3 sync ./frontend/mf-header/dist s3://s3-mf-header-prod --delete
+      #- aws s3 sync ./frontend/mf-header/dist s3://s3-mf-header-prod --delete
       - aws s3 sync ./frontend/mfe-prueba/dist s3://s3-mf-prueba-prod --delete
       - aws s3 sync ./frontend/mfe-registro-logueo-comprador/dist s3://s3-mf-registro-logueo-comprador-prod --delete
       - aws s3 sync ./frontend/mfe-administrador-gestion/dist s3://s3-mf-administrador-gestion-prod --delete
